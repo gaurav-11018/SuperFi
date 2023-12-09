@@ -1,12 +1,11 @@
-import { FC, useCallback } from 'react';
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+import { FC } from 'react';
 
 import { Box, Button, CircularProgress, TextareaAutosize, styled } from '@mui/material';
 
 import { ConnectButton } from '../ui/connect-button';
 
-import { MicroSpeechRecognition } from '@/components/base/speech-recognition';
 import { useSmartAccount } from '@/hooks/use-smart-account';
-import { SpeechRecognitionCustomResult } from '@/hooks/use-speech-recognition';
 
 interface PromptInputProps {
   onSubmit: () => void;
@@ -29,15 +28,6 @@ const StyledTextareaAutosize = styled(TextareaAutosize)(({ theme }) => ({
 
 export const PromptInput: FC<PromptInputProps> = ({ onSubmit, placeholder, promt, setPromtMessage, isLoading }) => {
   const { smartAccountAddress } = useSmartAccount();
-
-  const onRecognitionResult = useCallback(
-    (result: SpeechRecognitionCustomResult) => {
-      if (result.confidence > 0.6) {
-        setPromtMessage(result.transcript);
-      }
-    },
-    [setPromtMessage]
-  );
 
   return (
     <Box
@@ -66,7 +56,6 @@ export const PromptInput: FC<PromptInputProps> = ({ onSubmit, placeholder, promt
           placeholder={placeholder}
           disabled={isLoading}
         />
-        <MicroSpeechRecognition onRecognitionResult={onRecognitionResult} />
       </Box>
       {smartAccountAddress ? (
         <Button
