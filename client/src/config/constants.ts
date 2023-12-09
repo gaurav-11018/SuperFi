@@ -1,4 +1,4 @@
-export const APP_NAME = import.meta.env.VITE_APP_TITLE;
+export const APP_NAME = 'Pasta Proof';
 
 export const BUNDLER_URL = 'https://api.blocknative.com/v1/goerli/bundler';
 export const PROMT_API_URL = 'http://localhost:8000/parse-prompt';

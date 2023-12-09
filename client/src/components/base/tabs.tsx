@@ -56,6 +56,7 @@ export const Tabs: FC<TabsProps> = ({ tabs }) => {
         // mx: theme => theme.spacing(-2),
         backgroundColor: 'background.paper',
         borderBottom: 1,
+
         borderColor: 'divider',
         borderTopLeftRadius: isDesktop ? theme => theme.spacing(1) : 0,
         borderTopRightRadius: isDesktop ? theme => theme.spacing(1) : 0

@@ -1,13 +1,9 @@
 import { Box, styled } from '@mui/material';
 
-import { Header } from './header';
+import Header from './header';
 import { Navigation } from './navigation';
 
 import { CFC } from '@/types/react';
-
-const FullSizeContainer: CFC = styled(Box)({
-  display: 'flex'
-});
 
 const Wrapper: CFC = styled(Box)({
   display: 'grid',
@@ -19,7 +15,7 @@ export const Layout: CFC = ({ children }) => {
   return (
     <Wrapper>
       <Header />
-      <FullSizeContainer>{children}</FullSizeContainer>
+      {children}
       <Navigation />
     </Wrapper>
   );

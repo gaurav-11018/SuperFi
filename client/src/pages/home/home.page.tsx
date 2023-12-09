@@ -19,7 +19,7 @@ const tabs = ['Request', 'Templates'];
 
 const HomePlaceholder = () => {
   return (
-    <Box sx={{ display: 'grid', placeItems: 'center', height: 'fit-content', alignSelf: 'center' }}>
+    <Box sx={{ display: 'grid', placeItems: 'center', height: 'full', alignSelf: 'center', color: 'white' }}>
       <Hand />
       <Typography align="center" variant="h6">
         Hi! I am {APP_NAME}
@@ -77,7 +77,7 @@ export const HomePage = () => {
     >
       <Tabs tabs={tabs} />
       <TabPanel index={0}>
-        <Box sx={{ display: 'grid', gap: 2, gridTemplateRows: '1fr auto', flex: 1 }}>
+        <Box sx={{ display: 'grid', gap: 2, mb: 2, color: 'black' }}>
           <HomePlaceholder />
           <PromptInput
             promt={promtMessage}
