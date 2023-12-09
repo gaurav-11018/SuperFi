@@ -69,15 +69,18 @@ export class BatchAccountAPI extends SimpleAccountAPI {
       // fill (partial) preVerificationGas (all except the cost of the generated paymasterAndData)
       const userOpForPm = {
         ...partialUserOp,
-        preVerificationGas: await this.getPreVerificationGas(partialUserOp)
+        // preVerificationGas: await this.getPreVerificationGas(partialUserOp)
+        preVerificationGas: 65000
       };
+      console.log('here: preVerificationGas: ', userOpForPm.preVerificationGas);
       paymasterAndData = await this.paymasterAPI.getPaymasterAndData(userOpForPm);
     }
     partialUserOp.paymasterAndData = paymasterAndData ?? '0x';
 
     return {
       ...partialUserOp,
-      preVerificationGas: this.getPreVerificationGas(partialUserOp),
+      // preVerificationGas: this.getPreVerificationGas(partialUserOp),
+      preVerificationGas: 65000,
       signature: ''
     };
   }
