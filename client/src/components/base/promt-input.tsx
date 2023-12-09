@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 import { FC } from 'react';
 
-import { Box, Button, CircularProgress, TextareaAutosize, styled } from '@mui/material';
-
+import { CircularProgress } from '@mui/material';
+import { Button } from '../ui/button';
 import { ConnectButton } from '../ui/connect-button';
 
 import { useSmartAccount } from '@/hooks/use-smart-account';
+import { Input } from '../ui/input';
 
 interface PromptInputProps {
   onSubmit: () => void;
@@ -15,62 +16,32 @@ interface PromptInputProps {
   isLoading?: boolean;
 }
 
-const StyledTextareaAutosize = styled(TextareaAutosize)(({ theme }) => ({
-  width: '100%',
-  minHeight: 25,
-  resize: 'none',
-  padding: theme.spacing(1),
-
-  borderColor: 'transparent',
-  borderRadius: theme.spacing(0.5),
-  outline: 'none'
-}));
-
 export const PromptInput: FC<PromptInputProps> = ({ onSubmit, placeholder, promt, setPromtMessage, isLoading }) => {
   const { smartAccountAddress } = useSmartAccount();
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: '100%',
-        flexDirection: 'column',
-        gap: 2
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          width: '100%',
-          alignItems: 'center',
-          gap: 1
+    <div className="mt-auto w-3/4 flex flex-col gap-4 ">
+      <Input
+        value={promt}
+        onChange={e => {
+          setPromtMessage(e.target.value || '');
         }}
-      >
-        <StyledTextareaAutosize
-          value={promt}
-          onChange={e => {
-            setPromtMessage(e.target.value || '');
-          }}
-          placeholder={placeholder}
-          disabled={isLoading}
-        />
-      </Box>
+        placeholder={placeholder}
+        disabled={isLoading}
+        className="bg-transparent justify-center align-middle items-center focus:outline-none text-black rounded-2xl"
+      />
+
       {smartAccountAddress ? (
         <Button
-          sx={{
-            width: '100%'
-          }}
-          variant="contained"
+          className="w-[80%] border p-1  border-gray-800 font-bold rounded-2xl cursor-pointer text-black"
           onClick={onSubmit}
           disabled={isLoading || !promt}
         >
-          {isLoading ? <CircularProgress /> : 'SEND REQUEST'}
+          {isLoading ? <CircularProgress /> : 'Send Request'}
         </Button>
       ) : (
         <ConnectButton />
       )}
-    </Box>
+    </div>
   );
 };
