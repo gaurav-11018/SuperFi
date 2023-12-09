@@ -7,13 +7,12 @@ export const Desktop = () => (
     <Header />
 
     <div className="flex flex-row flex-1">
-      <div className="w-1/5">
-        <h1 className="text-secondary pb-3 font-bold text-2xl m-4 ">Account Details</h1>
+      <div className="w-1/5 border-r border-gray-800">
         <AccountPage />
       </div>
 
-      <div className="flex-grow w-4/5">
-        <h1 className="text-secondary pb-3  font-bold text-2xl m-4 ">Magic space</h1>
+      <div className="flex-grow w-4/5 h-screen ">
+        <h1 className="text-secondary pb-3  font-bold text-2xl m-4 ">DeFi space</h1>
         <div className="rounded p-4 ">
           <HomePage />
         </div>

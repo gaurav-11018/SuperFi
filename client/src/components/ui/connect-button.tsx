@@ -1,6 +1,5 @@
-import { Box, Button } from '@mui/material';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
-
+import { Button } from '../ui/button';
 import { Web3AuthConnector } from '@/auth/wagmi';
 import { shrink } from '@/utils/shrink';
 
@@ -14,25 +13,16 @@ export const ConnectButton = () => {
   const shortAddress = shrink(address);
 
   return (
-    <Box
-      sx={{
-        width: '100%'
-      }}
-    >
+    <div className="rounded-2xl flex">
       {isConnected ? (
-        <Button onClick={() => disconnect()}>{shortAddress}</Button>
+        <Button className="w-[80%] border p-1 rounded-2xl mx-auto border-gray-700 text-black" onClick={() => disconnect()}>
+          {shortAddress}
+        </Button>
       ) : (
-        <Button
-          sx={{
-            width: '100%'
-          }}
-          variant="contained"
-          color="success"
-          onClick={() => connect()}
-        >
+        <Button className="w-[80%] border p-1 rounded-2xl mx-auto border-gray-700 text-black" onClick={() => connect()}>
           Connect
         </Button>
       )}
-    </Box>
+    </div>
   );
 };

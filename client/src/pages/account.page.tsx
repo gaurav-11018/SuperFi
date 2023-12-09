@@ -28,14 +28,6 @@ const Tile = styled(ListItem)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper
 }));
 
-const SubHeader = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.secondary,
-  fontWeight: theme.typography.fontWeightBold,
-  fontSize: theme.typography.pxToRem(14),
-  padding: theme.spacing(1),
-  paddingBottom: theme.spacing(0.5)
-}));
-
 const GridList = styled(List)(({ theme }) => ({
   display: 'grid',
   gap: theme.spacing(1)
@@ -272,8 +264,10 @@ export const AccountPage = () => {
 
   return (
     <div className="">
+      <h1 className="text-secondary pb-3 font-bold text-2xl m-4 ">Account Details</h1>
+
       <Page>
-        <SubHeader>Network</SubHeader>
+        <h1 className="text-black text-xl font-bold mb-2">Network</h1>
         <Tile>
           <ListItemAvatar>
             <NetworkAvatar />
@@ -281,12 +275,11 @@ export const AccountPage = () => {
           <ListItemText primary={goerli.name} />
         </Tile>
 
-        <SubHeader>Accounts</SubHeader>
+        <h1 className="text-black text-xl font-bold my-2">Accounts</h1>
         <GridList>{isReady && <SmartAccountTile />}</GridList>
-
         {isReady && (
           <>
-            <SubHeader>Balances</SubHeader>
+            <h1 className="text-black text-xl font-bold my-2">Tokens</h1>
             <GridList>
               {tokens.map(token => (
                 <Balance key={token.address ?? '0'} token={token} />
