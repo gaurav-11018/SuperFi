@@ -11,7 +11,7 @@
 🌟 _Empowering users with a simple, secure, and universally accessible DeFi experience._ 🌟
 
 
-`Video Demo Link : https://www.youtube.com/watch?v=v3B-DbI4BGM `
+Video Demo Link : `https://www.youtube.com/watch?v=v3B-DbI4BGM `
 
-`PPT Link:https://www.canva.com/design/DAF2ihKtuik/02W3RTDkpDmMlwIMJxXdOA/view `
+PPT Link: `https://www.canva.com/design/DAF2ihKtuik/02W3RTDkpDmMlwIMJxXdOA/view `
 
