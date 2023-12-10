@@ -15,11 +15,17 @@ export const ConnectButton = () => {
   return (
     <div className="rounded-2xl flex">
       {isConnected ? (
-        <Button className="w-[80%] border p-1 rounded-2xl mx-auto border-gray-700 text-black" onClick={() => disconnect()}>
+        <Button
+          className=" px-3 border p-1 rounded-2xl mx-auto border-gray-700 bg-black text-white "
+          onClick={() => disconnect()}
+        >
           {shortAddress}
         </Button>
       ) : (
-        <Button className="w-[80%] border p-1 rounded-2xl mx-auto border-gray-700 text-black" onClick={() => connect()}>
+        <Button
+          className=" px-3 border rounded-2xl mx-auto border-gray-700 bg-black text-white p-3"
+          onClick={() => connect()}
+        >
           Connect
         </Button>
       )}

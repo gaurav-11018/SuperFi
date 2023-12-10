@@ -3,17 +3,19 @@ import { AccountPage } from './pages/account.page';
 import { HomePage } from './pages/home/home.page';
 
 export const Desktop = () => (
-  <div className="flex flex-col ">
+  <div className="flex flex-col h-screen">
     <Header />
 
-    <div className="flex flex-row flex-1">
-      <div className="w-1/5 border-r border-gray-800">
+    <div className="flex flex-1 overflow-hidden">
+      {/* Div1 */}
+      <div className="w-1/5 border-r border-gray-800 overflow-y-auto hide-scrollbar">
         <AccountPage />
       </div>
 
-      <div className="flex-grow w-4/5 h-screen ">
-        <h1 className="text-secondary pb-3  font-bold text-2xl m-4 ">DeFi space</h1>
-        <div className="rounded p-4 ">
+      {/* Div2 */}
+      <div className="flex-grow h-screen">
+        <h1 className="text-black pb-3 font-bold text-2xl m-4">DeFi space</h1>
+        <div className="rounded p-4">
           <HomePage />
         </div>
       </div>

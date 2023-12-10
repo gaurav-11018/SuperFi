@@ -8,7 +8,7 @@ export function App() {
   const { isDesktop } = useIsDesktop();
 
   return (
-    <main className='bg-primary'>
+    <main className="bg-primary">
       <ProvidersSandwich>
         {isDesktop ? (
           <Desktop />
