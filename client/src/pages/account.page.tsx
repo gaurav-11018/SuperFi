@@ -264,7 +264,7 @@ export const AccountPage = () => {
 
   return (
     <div className="">
-      <h1 className="text-secondary pb-3 font-bold text-2xl m-4 ">Account Details</h1>
+      <h1 className="text-black pb-3 font-bold text-2xl m-4 ">Account Details</h1>
 
       <Page>
         <h1 className="text-black text-xl font-bold mb-2">Network</h1>

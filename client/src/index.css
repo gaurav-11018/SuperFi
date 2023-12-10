@@ -47,3 +47,11 @@
     --ring: 240 4.9% 83.9%;
   }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

@@ -27,18 +27,18 @@ export const HomePage = () => {
   };
 
   return (
-    <>
+    <main className="w-full">
       <PromptInput
         promt={promtMessage}
         setPromtMessage={setPromtMessage}
         onSubmit={onPromtSubmit}
-        placeholder={'Enter Your Request'}
+        placeholder={'Enter Your Request....'}
       />
       <OperationScreen isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <LoaderScreen open={isSubmitting}>
         <CircularProgress color="success" />
       </LoaderScreen>
-    </>
+    </main>
   );
 };

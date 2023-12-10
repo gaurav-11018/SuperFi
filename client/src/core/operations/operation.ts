@@ -7,7 +7,7 @@ import { Uniswap } from '../support-operations/uniswap';
 import { WrapEth } from '../support-operations/wrap-eth';
 
 export const OperationDictionary = {
-  [Operation.SendToken]: Erc20.createTransferPreOp,
+  [Operation.SendToken]: Erc20.createTPransferPreOp,
   [Operation.LidoDeposit]: Lido.createDepositPreOp,
   [Operation.WrapEth]: WrapEth.createDepositPreOp,
   [Operation.AaveDeposit]: AAveV3.createDepositPreOp,
