@@ -1,4 +1,4 @@
-### 🚀 **SuperFi: Revolutionizing DeFi Access**
+### 🚀 **SuperFi: SuperFi: Transforming DeFi with AI, where a simple prompt is all you need for seamless financial transactions.**
 
 - **🔊 Text Command Simplicity**: Forget complex interfaces! Execute DeFi actions with straightforward text prompts.
 - **👥 User-Friendly**: Tailored for both DeFi newbies and pros. As effortless as using a social media app.
