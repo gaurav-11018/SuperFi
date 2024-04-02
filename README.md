@@ -1,4 +1,4 @@
-### 🚀 **Prompt DeFi: Revolutionizing DeFi Access**
+### 🚀 **SuperFi: Revolutionizing DeFi Access**
 
 - **🔊 Text Command Simplicity**: Forget complex interfaces! Execute DeFi actions with straightforward text prompts.
 - **👥 User-Friendly**: Tailored for both DeFi newbies and pros. As effortless as using a social media app.
